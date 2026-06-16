@@ -177,4 +177,4 @@ test('creates a user', async ({ usersApi }) => {
 ## 👤 Author
 
 **Sten Nick** — QA Engineer  
-[GitHub](https://github.com/charleyheartman) · [LinkedIn](https://linkedin.com/in/your-profile)
+[GitHub](https://github.com/charleyheartman) · [LinkedIn](https://www.linkedin.com/in/nikolay-stenkin/)
