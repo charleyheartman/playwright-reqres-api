@@ -1,5 +1,7 @@
 # playwright-reqres-api
 
+![Playwright Tests](https://github.com/charleyheartman/playwright-reqres-api/actions/workflows/playwright.yml/badge.svg)
+
 API test automation project built with **Playwright** and **TypeScript**, covering REST API endpoints of [reqres.in](https://reqres.in).
 
 ---
