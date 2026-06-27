@@ -21,14 +21,23 @@ export default defineConfig({
   },
 
   projects: [
+    // API тесты — без браузера, один прогон
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+        name: 'api',
+        testMatch: '**/specs/**/*.spec.ts',
+        testIgnore: '**/example.spec.ts',
+    },
+    
+    // UI тесты — с браузерами
+    {
+        name: 'chromium',
+        use: { ...devices['Desktop Chrome'] },
+        testMatch: '**/example.spec.ts',
     },
     {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+        name: 'firefox',
+        use: { ...devices['Desktop Firefox'] },
+        testMatch: '**/example.spec.ts',
     },
-    // webkit убрали — не поддерживается на macOS 13
-  ],
+],
 });

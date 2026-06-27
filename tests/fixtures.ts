@@ -1,11 +1,13 @@
 import { test as base } from '@playwright/test';
-import { UsersApi } from './api/UsersApi';
-import { UnknownApi } from './api/UnknownApi';
+import { UsersApi } from './api/clients/UsersApi';
+import { UnknownApi } from './api/clients/UnknownApi';
+import { ProductsApi } from './api/clients/ProductsApi';
 
 
 type Fixtures = {
     usersApi: UsersApi,
     unknownApi: UnknownApi,
+    productsApi: ProductsApi,
 };
 
 export const test = base.extend<Fixtures>({
@@ -14,6 +16,9 @@ export const test = base.extend<Fixtures>({
     },
     unknownApi: async ({ request }, use) => {
         await use(new UnknownApi(request));
+    },
+    productsApi: async ({ request }, use) => {
+        await use(new ProductsApi(request));
     },
 });
 
